@@ -5,7 +5,7 @@ import java.util.Set;
 public class Ord {
 
 
-    public String palindrom(String ord) {
+    public static String palindrom(String ord) {
 
         ord = ord.toLowerCase();
 
@@ -20,7 +20,7 @@ public class Ord {
         }
     }
 
-    public String isogram(String ord) {
+    public static String isogram(String ord) {
 
         char arr[] = ord.toLowerCase().toCharArray();
 
@@ -32,12 +32,12 @@ public class Ord {
         return "True - " + ord + " är en isogram";
     }
 
-    public String pangram(String ord) {
+    public static String pangram(String ord) {
 
 
-        String[] ary = ord.toLowerCase().replaceAll("\\P{L}+", "").split("");
-        Set<String> mySet = new HashSet<String>(Arrays.asList(ary));
-        if (29 == mySet.size()) {
+        String[] bokstavsArray = ord.toLowerCase().replaceAll("\\P{L}+", "").split("");
+        Set<String> bokstavsHashSet = new HashSet<String>(Arrays.asList(bokstavsArray));
+        if (29 == bokstavsHashSet.size()) {
             return "True - " + ord + " är en Isogram";
         }
 

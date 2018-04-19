@@ -1,12 +1,12 @@
 public class C {
 
     private static int totaltAntal;
-    private int id[];
+    private int id;
 
     public void C() {
 
         totaltAntal++;
-        id[totaltAntal] = totaltAntal;
+        id = totaltAntal;
     }
 
     public static int getTotaltAntal() {
@@ -14,8 +14,8 @@ public class C {
         return totaltAntal;
     }
 
-    public int getId(int ID) {
+    public int getId() {
 
-        return id[ID];
+        return id;
     }
 }
